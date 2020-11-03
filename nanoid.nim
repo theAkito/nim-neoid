@@ -34,10 +34,6 @@ else:
   import pkg/random
   proc genRandomBytes(step: int): seq[byte] =
     result = urandom(step)
-try:
-  echo genRandomBytes(12)
-except:
-  echo getCurrentExceptionMsg()
 
 let a = "_-0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 let s = 21
