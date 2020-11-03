@@ -1,6 +1,6 @@
 import
   unittest,
-  ../src/nanoid
+  ../neoid
 
 suite "Test suite for size":
   setup:

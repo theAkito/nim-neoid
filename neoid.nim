@@ -1,7 +1,7 @@
 import
   math,
   lenientops,
-  nanoid/nonsecure
+  neoid/nonsecure
 export
   nonsecure
 

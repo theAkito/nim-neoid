@@ -1,6 +1,6 @@
 import
   unittest,
-  ../src/nanoid
+  ../neoid
 
 suite "Non-secure":
   test "Generates correct length":

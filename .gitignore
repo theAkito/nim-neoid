@@ -58,5 +58,6 @@ nimblecache/
 htmldocs/
 *_[0-9][0-9]*.nims
 # Binaries and Temp Files
-nanoid.out
-nanoid.exe
+neoid.out
+neoid.exe
+neoid_debug*
