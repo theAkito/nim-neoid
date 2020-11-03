@@ -3,9 +3,13 @@ import
   lenientops,
   pkg/random,
   nanoid/nonsecure
-
 export
   nonsecure
+
+when defined(windows):
+  discard
+else:
+  discard
 
 let a = "_-0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 let s = 21

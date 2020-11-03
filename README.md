@@ -1,6 +1,8 @@
+## License
 MIT License
 
-Copyright (c) 2018 Anirudh Oppiliappan <icyph0x@pm.me>
+Copyright (C) 2020  Akito <the@akito.ooo>
+Copyright (C) 2018 Anirudh Oppiliappan <icyph0x@pm.me>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

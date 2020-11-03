@@ -1,12 +1,12 @@
 # Package
 
-version       = "0.2.0"
-author        = "Anirudh"
-description   = "The Nim implementation of NanoID"
+version       = "0.3.0"
+author        = "Akito"
+description   = "Nim implementation of NanoID."
 license       = "MIT"
-srcDir        = "src"
 
 # Dependencies
 
-requires "nim >= 0.18.0", "random >= 0.5.5"
+requires "nim    >= 1.4.0"
+requires "random >= 0.5.7"
 
