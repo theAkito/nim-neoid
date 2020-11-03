@@ -28,7 +28,7 @@ nimble test
 Linux & Windows.
 
 ## Goals
-Keep it compatible with Windows
+Keep it compatible with Windows.
 
 ## Project Status
 At the time of writing, very ugly Windows is implemented, but at least it works precisely the way it is supposed to!
@@ -37,6 +37,7 @@ At the time of writing, very ugly Windows is implemented, but at least it works 
 MIT License
 
 Copyright (C) 2020  Akito <the@akito.ooo>
+
 Copyright (C) 2018 Anirudh Oppiliappan <icyph0x@pm.me>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
