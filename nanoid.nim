@@ -1,15 +1,43 @@
 import
   math,
   lenientops,
-  pkg/random,
   nanoid/nonsecure
 export
   nonsecure
 
 when defined(windows):
-  discard
+  import
+    winim/lean,
+    sequtils,
+    strutils
+  proc genRandomRaw(step: int = 1): byte =
+    var
+      temp     : string
+      uBuf              = step.alloc
+      pbBuffer : PUCHAR = cast[PUCHAR](uBuf.addr)
+      cbBuffer : ULONG  = step.int32
+      dwFlags  : ULONG  = BCRYPT_USE_SYSTEM_PREFERRED_RNG
+    let
+      randNum = BCryptGenRandom(
+        NULL,
+        pbBuffer,
+        cbBuffer,
+        dwFlags
+      )
+    temp   = pbBuffer.repr.split(' ')[3]
+    temp.stripLineEnd()
+    result = temp.parseUInt().byte
+  proc genRandomBytes(step: int): seq[byte] =
+    for i in 1..step:
+      result.add(genRandomRaw())
 else:
-  discard
+  import pkg/random
+  proc genRandomBytes(step: int): seq[byte] =
+    result = urandom(step)
+try:
+  echo genRandomBytes(12)
+except:
+  echo getCurrentExceptionMsg()
 
 let a = "_-0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 let s = 21
@@ -33,7 +61,7 @@ proc generate*(alphabet: string = a, size: int = s): string =
 
   while true:
     var randomBytes: seq[byte]
-    randomBytes = urandom(step)
+    randomBytes = genRandomBytes(step)
     for i in countUp(0, step-1):
       var randByte = randomBytes[i].int and mask
       if randByte < len(alphabet):

@@ -9,4 +9,5 @@ license       = "MIT"
 
 requires "nim    >= 1.4.0"
 requires "random >= 0.5.7"
+requires "winim  >= 3.4.0"
 

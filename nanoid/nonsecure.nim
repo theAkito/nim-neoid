@@ -1,7 +1,6 @@
 import 
   random,
-  lenientops,
-  math
+  lenientops
 
 let a = "_-0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var s = 21
