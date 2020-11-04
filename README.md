@@ -2,7 +2,7 @@
 
 [![Language](https://img.shields.io/badge/language-Nim-orange.svg?style=plastic)](https://nim-lang.org/)
 
-[![GitHub](https://img.shields.io/badge/license-GPL--3.0-informational?style=plastic)](https://www.gnu.org/licenses/gpl-3.0.txt)
+[![GitHub](https://img.shields.io/github/license/theAkito/nim-neoid?style=plastic)](https://mit-license.org/)
 [![Liberapay patrons](https://img.shields.io/liberapay/patrons/Akito?style=plastic)](https://liberapay.com/Akito/)
 
 ## What
@@ -36,8 +36,7 @@ At the time of writing, very ugly Windows is implemented, but at least it works 
 ## License
 MIT License
 
-Copyright (C) 2020  Akito <the@akito.ooo>
-
+Copyright (C) 2020  Akito <the@akito.ooo>\
 Copyright (C) 2018 Anirudh Oppiliappan <icyph0x@pm.me>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
