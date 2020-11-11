@@ -2,10 +2,10 @@ import
   random,
   lenientops
 
-let a = "_-0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-var s = 21
-
-proc generateNonSecure*(alphabet: string = a, size: int = s): string =
+proc generateNonSecure*(
+  alphabet : string = "_-0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  size     : int    = 21
+): string =
   result = ""
   randomize()
   for i in countup(0, size-1):

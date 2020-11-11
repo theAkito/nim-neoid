@@ -35,10 +35,10 @@ else:
   proc genRandomBytes(step: int): seq[byte] =
     result = urandom(step)
 
-let a = "_-0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-let s = 21
-
-proc generate*(alphabet: string = a, size: int = s): string =
+proc generate*(
+  alphabet : string = "_-0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  size     : int    = 21
+): string {.gcsafe.} =
   if alphabet == "":
     result = ""
   if size < 1:
