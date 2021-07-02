@@ -1,5 +1,6 @@
 import
   unittest,
+  os,
   ../neoid
 
 suite "Non-secure":
@@ -12,4 +13,5 @@ suite "Non-secure":
       var id = generateNonSecure()
       generated.add(id)
     check(generate() in generated == false)
-  
+
+("tests" / "test_nonsecure").removeFile

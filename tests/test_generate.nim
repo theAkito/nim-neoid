@@ -1,5 +1,6 @@
 import
   unittest,
+  os,
   ../neoid
 
 suite "Test suite for size":
@@ -38,3 +39,5 @@ suite "Test suite for collisions":
       check(len(id) == 9)
       generated.add(id)
     check(generate() in generated == false)
+
+("tests" / "test_generate").removeFile
