@@ -25,7 +25,9 @@ nimble test
 ```
 
 ## Where
-Linux & Windows.
+* Linux
+* Windows
+* OpenBSD
 
 ## Goals
 Keep it compatible with Windows.
