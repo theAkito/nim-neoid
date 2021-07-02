@@ -2,6 +2,8 @@
 
 [![Language](https://img.shields.io/badge/language-Nim-orange.svg?style=plastic)](https://nim-lang.org/)
 
+[![Build Status](https://drone.akito.ooo/api/badges/Akito/nim-neoid/status.svg)](https://drone.akito.ooo/Akito/nim-neoid)
+
 [![GitHub](https://img.shields.io/github/license/theAkito/nim-neoid?style=plastic)](https://mit-license.org/)
 [![Liberapay patrons](https://img.shields.io/liberapay/patrons/Akito?style=plastic)](https://liberapay.com/Akito/)
 
