@@ -14,9 +14,10 @@ when defined(windows):
     var
       temp     : string
       uBuf              = step.alloc
-      pbBuffer : PUCHAR = cast[PUCHAR](uBuf.addr)
+      pbBuffer : PUCHAR = cast[PUCHAR](uBuf)
       cbBuffer : ULONG  = step.int32
       dwFlags  : ULONG  = BCRYPT_USE_SYSTEM_PREFERRED_RNG
+    assert uBuf != nil
     let
       randNum = BCryptGenRandom(
         NULL,
@@ -24,9 +25,9 @@ when defined(windows):
         cbBuffer,
         dwFlags
       )
-    temp   = pbBuffer.repr.split(' ')[3]
-    temp.stripLineEnd()
-    result = temp.parseUInt().byte
+    assert randNum == STATUS_SUCCESS
+    result = pbBuffer[].byte
+    uBuf.dealloc
   proc genRandomBytes(step: int): seq[byte] =
     for i in 1..step:
       result.add(genRandomRaw())
